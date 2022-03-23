@@ -5,13 +5,13 @@
   <p><%= @restaurant.category %></p>
   <ul class="list-group">
     <% @restaurant.reviews.each do |review| %>
-      <li class="list-group-item"><%= review.content %></li>
+      <li class="list-group-item"><%= review.content %> <span>  - stars: <%= review.rating %></span></li>
     <% end %>
   </ul>
   <br>
   <%= link_to 'restaurants', restaurants_path %> -
   <%= link_to 'New', new_restaurant_path %> -
   <%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %> -
-  <%= render 'form',new_restaurant_review_path(@restaurant) %>
-
+<br>
+<%= notice %>
 </div>

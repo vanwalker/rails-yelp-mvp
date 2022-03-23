@@ -1,4 +1,6 @@
 <div class="container">
+<%= notice %>
+<br>
     <%= simple_form_for [ @restaurant, @review ] do |f| %>
       <%= f.input :content %>
       <%= f.input :rating %>
